@@ -1,6 +1,6 @@
 # Thunderkey
 
-This is the source code for [Thunderkey](https://addons.thunderbird.net/thunderbird/addon/thunderkey).
+This is the source code for [Thunderkey](https://addons.thunderbird.net/thunderbird/addon/thunderkey), a Thunderbird Extension.
 
 ## Features
 
