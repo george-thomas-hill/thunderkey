@@ -1,0 +1,49 @@
+<!--
+// © 2021 Sarah Forest and George Hill
+//
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at https://mozilla.org/MPL/2.0/.
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Move Message To New Folder</title>
+    <script type="text/javascript" src="sent.js" defer="true"></script>
+    <link rel="stylesheet" href="../bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="sent.css">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h4 class="mt-1">Move Sent Message To New Folder</h4>
+        <form action="/move-sent-folder" method="post" id="move-sent-folder">
+            <div class="form-group">
+                <label for="dropdown-accounts-original-move">Account Name</label>
+                <select id="dropdown-accounts-original-move" class="form-control" name="account-name-original-move">
+                </select>
+            </div>
+            <div id="sent-message" class="mt-1 card bg-light"></div>
+            <div class="pt-2 form-group">
+                <label class="form-label" for="dropdown-accounts-move">Move To Account</label>
+                <select id="dropdown-accounts-move" class="form-control" name="account-name-move">
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="dropdown-folders-move">Move To Folder</label>
+                <select id="dropdown-folders-move" class="form-control" name="parent-folder-name-move">
+                </select>
+            </div>
+            <div id="button-group" class="btn-group">
+                <button type="submit" class="btn btn-primary mr-2">Move</button>
+                <button id="cancel" class="btn btn-danger">Cancel</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

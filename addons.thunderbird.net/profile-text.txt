@@ -1,0 +1,118 @@
+© 2021 Sarah Forest and George Hill
+
+This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.
+
+--------------------------------------------------------------------------------
+
+The following is the text to be used in Thunderkey's profile on addons.thunderbird.net.
+
+--------------------------------------------------------------------------------
+
+Name:
+
+Thunderkey
+
+--------------------------------------------------------------------------------
+
+Icon:
+
+At src/thunderkey-icon/thunderkey-64.png
+And at src/thunderkey-icon/thunderkey-32.png
+
+--------------------------------------------------------------------------------
+
+Summary:
+
+Lets you perform common email tasks using keyboard shortcuts.
+
+--------------------------------------------------------------------------------
+
+Categories:
+
+"Appearance and Customization" and "Folders and Filters"
+
+--------------------------------------------------------------------------------
+
+Tags:
+
+keyboard shortcut shortcuts scroll up down navigate jump file folder folders favorite favorites sent message create
+
+--------------------------------------------------------------------------------
+
+Description:
+
+Thunderkey lets you perform common email tasks using keyboard shortcuts.
+
+You can:
+
+* Scroll a message up or down without leaving your main window's messages list.
+
+* Navigate up or down one folder at a time.
+
+* Jump to your favorite folders.
+
+* File messages in those folders.
+
+* File your last-sent message.
+
+* Create new folders.
+
+All shortcuts can be customized.
+
+Mozilla requires us to disclose how Thunderkey collects, uses, and stores user data.
+
+Thunderkey only collects the information that you provide to it through the options page; Thunderkey stores that information on your hard drive.
+
+More information is in our Privacy Policy.
+
+Known Issue:
+
+* Changes made with this extension—like filing a message in a folder—aren't noticed by Thunderbird's undo/redo system. This is a limitation built into Thunderbird and we can't change it through this extension.
+
+--------------------------------------------------------------------------------
+
+Add-on home page:
+
+https://github.com/george-thomas-hill/thunderkey
+
+--------------------------------------------------------------------------------
+
+Support site:
+
+https://github.com/george-thomas-hill/thunderkey/issues
+
+--------------------------------------------------------------------------------
+
+Support email:
+
+(None)
+
+--------------------------------------------------------------------------------
+
+Privacy Policy:
+
+Mozilla requires us to disclose how Thunderkey collects, uses, and stores user data.
+
+Thunderkey only collects the information that you provide to it through the options page.
+
+This information is limited to your choice of shortcuts and your selections of favorite folders.
+
+This information is necessary for Thunderkey to respond correctly when you use a keyboard shortcut.
+
+The information is stored on your computer's hard drive.
+
+It does not leave your computer (unless, for example, you use some kind of backup or file-synchronization service).
+
+If you do not provide this information, Thunderkey will use only the default keyboard shortcuts.
+
+--------------------------------------------------------------------------------
+
+Released under:
+
+Mozilla Public License, version 2.0
+
+--------------------------------------------------------------------------------
+
+Version Information for Version 1.0.0:
+
+This is the first release.

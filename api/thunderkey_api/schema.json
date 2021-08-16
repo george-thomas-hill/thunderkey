@@ -1,0 +1,70 @@
+[
+    {
+        "namespace": "thunderkey_api",
+        "functions": [
+            {
+                "name": "sayHello",
+                "type": "function",
+                "description": "Says hello to the user.",
+                "async": true,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "type": "string",
+                        "description": "Who to say hello to."
+                    }
+                ]
+            },
+            {
+                "name": "getManuallySortFoldersSortOrderData",
+                "type": "function",
+                "description": "Get sort order data set by the 'Manually sort folders' extension.",
+                "async": true,
+                "parameters": []
+            }
+        ],
+        "events": [
+            {
+                "name": "onToolbarClick",
+                "type": "function",
+                "description": "Fires when the user clicks anywhere on the toolbar in the main window.",
+                "parameters": [
+                    {
+                        "name": "toolbarId",
+                        "type": "string",
+                        "description": "The ID of the toolbar the user clicked."
+                    },
+                    {
+                        "type": "integer",
+                        "name": "x",
+                        "minimum": 0,
+                        "description": "The X position of the mouse when the user clicked."
+                    },
+                    {
+                        "type": "integer",
+                        "name": "y",
+                        "minimum": 0,
+                        "description": "The Y position of the mouse when the user clicked."
+                    }
+                ]
+            },
+            {
+                "name": "onAnyKeydown",
+                "type": "function",
+                "description": "Fires when the user presses any key in any window.",
+                "parameters": [
+                    {
+                        "name": "pressedKey",
+                        "type": "string",
+                        "description": "The key combination that the user pressed."
+                    },
+                    {
+                        "name": "view",
+                        "type": "string",
+                        "description": "The path of the window where the key was pressed."
+                    }
+                ]
+            }
+        ]
+    }
+]

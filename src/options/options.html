@@ -1,0 +1,118 @@
+<!--
+// © 2021 Sarah Forest and George Hill
+//
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at https://mozilla.org/MPL/2.0/.
+-->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Preferences for Thunderkey</title>
+    <link rel="stylesheet" href="../bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="options.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container d-flex justify-content-between">
+                <div class="navbar-brand d-flex align-items-center">
+                    <img style="max-height:64px" src="../../src/thunderkey-icon/thunderkey-64.png" />
+                    &nbsp;&nbsp;&nbsp;
+                    <strong>Thunderkey</strong>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="copyright">
+        <p>
+            © 2021 Sarah Forest and George Hill. Released under the
+            <a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public
+                License, Version 2.0</a>.
+            Source code, dependencies, and attributions available
+            <a href="https://github.com/george-thomas-hill/thunderkey">here</a>.
+        </p>
+    </div>
+    <div id="experimental-shortcuts-helper" style="display: none;">
+        <p>You pressed: <span id="experimental-keypress"></span></p>
+        <p>Now editing command: <span id="experimental-command"></span></p>
+    </div>
+    <div class="container-fluid">
+        <div class="mt-2 card bg-light">
+            <div class="card-header py-1">
+                <h4>Opt-In to Customizations</h4>
+            </div>
+            <div class="card-body py-1">
+                Mozilla requires Thunderkey to get your permission to store your
+                customizations on your hard drive.
+                <br>
+                If it's okay to do so, please opt-in by clicking the box below.
+                <br>
+                If you don't opt-in, only the default keyboard shortcuts will
+                work.
+                <br>
+                If you opt-in but then change your mind, you can uncheck the box
+                and erase your customizations.
+                </ul>
+            </div>
+        </div>
+        <br>
+        <input type="checkbox" id="optin" name="optin">
+        <label for="optin">
+            I opt-in to storing customizations on my hard drive.
+        </label>
+        <div id="options" style="display:none;">
+            <div class="mt-2 card bg-light">
+                <div class="card-header py-1">
+                    <h4>Quick Actions</h4>
+                </div>
+                <div class="card-body py-1">
+                    To change the shortcut for a command, click the "Edit"
+                    button and then press the desired keyboard shortcut.
+                </div>
+            </div>
+            <br>
+            <table class="table" id="experimental-shortcuts"></table>
+            <div class="card bg-light">
+                <div class="card-header py-2">
+                    <h4>Folder Preferences</h4>
+                </div>
+                <div class="mt-2 py-0">
+                    <ol>
+                        <li>Select one of your system's mail folders.</li>
+                        <li>
+                            Specify the keyboard shortcut that should result in
+                            selecting that folder.
+                        </li>
+                        <li>
+                            Specify the keyboard shortcut that should move
+                            selected messages to that folder.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <br>
+            <table class="table" id="select-and-move"></table>
+            <div class="card bg-light">
+                <div class="card-header py-1">
+                    <h4>Favorite Folders for Sent Messages</h4>
+                </div>
+                <div class="bg-light">
+                    <div class="card-body py-1">
+                        Select one or more folders per email account where you
+                        commonly file your sent messages.
+                    </div>
+                </div>
+            </div>
+            <div id="favorite-list"></div>
+        </div>
+    </div>
+    <script src="options.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+/*
+// © 2021 Sarah Forest and George Hill
+//
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at https://mozilla.org/MPL/2.0/.
+*/
+
+.indent {
+    margin-left: 1rem;
+    padding-left: 1rem;
+}
+
+.indent.secondary {
+    margin-left: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.indent.tertiary {
+    margin-left: 2rem;
+    padding-left: 2rem;
+}
+
+.indent.four {
+    margin-left: 2.5rem;
+    padding-left: 2.5rem;
+}
+
+.indent.five {
+    margin-left: 3rem;
+    padding-left: 3rem;
+}
+
+.indent.six {
+    margin-left: 3.5rem;
+    padding-left: 3.5rem;
+}

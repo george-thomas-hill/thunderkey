@@ -1,0 +1,191 @@
+<!--
+// © 2021 Sarah Forest and George Hill
+//
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at https://mozilla.org/MPL/2.0/.
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Get Started with Thunderkey</title>
+    <script type="text/javascript" src="onboarding.js" defer="true"></script>
+    <link rel="stylesheet" href="../bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="onboarding.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container d-flex justify-content-between">
+                <div class="navbar-brand d-flex align-items-center">
+                    <img style="max-height:64px" src="../../src/thunderkey-icon/thunderkey-64.png" />
+                    &nbsp;&nbsp;&nbsp;
+                    <strong>Thunderkey</strong>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="copyright">
+        <p>
+            © 2021 Sarah Forest and George Hill. Released under the
+            <a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public
+                License, Version 2.0</a>.
+            Source code, dependencies, and attributions available
+            <a href="https://github.com/george-thomas-hill/thunderkey">here</a>.
+        </p>
+    </div>
+    <div class="container-fluid">
+        <h1 class="text-dark jumbotron-heading">
+            Thank you for installing Thunderkey!
+        </h1>
+        <section class="text-center">
+            <div class="container">
+                <div class="row col-12 lead text-dark">
+                    <h4>
+                        <strong>
+                            Thunderkey lets you perform common email tasks
+                            using keyboard shortcuts:
+                        </strong>
+                    </h4>
+                    <div class="col-6 main-features">
+                        <ul>
+                            <li>
+                                Scroll a message up or down without leaving your
+                                main window's messages list.
+                            </li>
+                            <li>Navigate up or down one folder at a time.</li>
+                        </ul>
+                    </div>
+                    <div class="col-6 main-features">
+                        <ul>
+                            <li>Jump to your favorite folders.</li>
+                            <li>File messages in those folders.</li>
+                            <li>File your last-sent message.</li>
+                            <li>Create new folders.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="album bg-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card mb-12 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="text-dark">
+                                <strong>
+                                    Complete one-time setup on the preferences
+                                    page to customize your keyboard shortcuts.
+                                </strong>
+                                <br>
+                            </h4>
+                            <div class="row py-2">
+                                <div class="col-md-7 col-sm-12">
+                                    <img style="width: 100%;" src="./quick-actions.png" />
+                                </div>
+                                <div class="col-md-5 col-sm-12">
+                                    <h5 class="text-dark">
+                                        <i>
+                                            1. Quick Actions
+                                        </i>
+                                        <br>
+                                        <br>
+                                        <ul>
+                                            <li>
+                                                This section manages most of
+                                                Thunderkey's features.
+                                            </li>
+                                            <li>
+                                                Customize the shortcuts by
+                                                clicking "Edit" and entering a
+                                                new keyboard combination.
+                                            </li>
+                                            <li>
+                                                You can also disable any
+                                                built-in shortcut.
+                                            </li>
+                                        </ul>
+                                    </h5>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row py-2">
+                                <div class="col-md-5 col-sm-12">
+                                    <h5 class="text-dark">
+                                        <i>
+                                            2. Folder Preferences:
+                                        </i>
+                                        <br>
+                                        <br>
+                                        <ul>
+                                            <li>
+                                                Choose up to 20 favorite mail
+                                                folders.
+                                            </li>
+                                            <li>
+                                                For each folder, set a keyboard
+                                                shortcut that will let you jump
+                                                to that folder.
+                                            </li>
+                                            <li>
+                                                You can also set shortcuts that
+                                                file the selected messages into
+                                                those folders.
+                                            </li>
+                                        </ul>
+                                    </h5>
+                                </div>
+                                <div class="col-md-7 col-sm-12">
+                                    <img style="width: 100%;" src="./folder-preferences.png" />
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row py-2">
+                                <div class="col-md-7 col-sm-12">
+                                    <img style="width: 100%;" src="./favorite-folders-sent.png" />
+                                </div>
+                                <div class="col-md-5 col-sm-12">
+                                    <h5 class="text-dark">
+                                        <i>
+                                            3. Favorite Folders for Sent
+                                            Messages:
+                                        </i>
+                                        <br>
+                                        <br>
+                                        <ul>
+                                            <li>
+                                                For each of your accounts,
+                                                select favorite folders where
+                                                you frequently save sent messages.
+                                            </li>
+                                            <li>
+                                                After you send a message, hit
+                                                the shortcut defined above to
+                                                file your most recently sent
+                                                message into a folder that you
+                                                select.
+                                            </li>
+                                        </ul>
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button class="btn btn-primary my-2" id="options-page">
+                                    Customize Extension Preferences
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

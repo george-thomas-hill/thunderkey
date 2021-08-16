@@ -1,0 +1,32 @@
+/*
+// © 2021 Sarah Forest and George Hill
+//
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at https://mozilla.org/MPL/2.0/.
+*/
+
+.navbar-brand {
+    font-size: 44px;
+}
+
+.copyright {
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 0px;
+}
+
+.active {
+    background-color: yellow;
+}
+
+.table td {
+    padding: 0.28rem;
+}
+
+@media(max-width: 800px) {
+    #select-and-move>tbody>tr>td:nth-child(2), #select-and-move .folder-list {
+        width: 200px;
+    }
+}

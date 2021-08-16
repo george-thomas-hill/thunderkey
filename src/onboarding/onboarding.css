@@ -1,0 +1,52 @@
+/*
+// © 2021 Sarah Forest and George Hill
+//
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at https://mozilla.org/MPL/2.0/.
+*/
+
+body {
+    background-color: #fff;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navbar-brand {
+    font-size: 44px;
+}
+
+.copyright {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.main-heading {
+    margin: 230px auto 0 auto;
+    text-align: center;
+}
+
+.main-features {
+    list-style-type: none;
+    text-align: left;
+}
+
+.container-fluid {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.jumbotron-heading {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.lead {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
