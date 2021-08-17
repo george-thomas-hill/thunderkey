@@ -638,8 +638,10 @@ function recursivelyGetFolderList(folders) {
 async function addFolder() {
     browser.windows.create({
         url: "/src/add-folder/add-folder.html",
-        type: "panel"
-    })
+        type: "panel",
+        width: 700,
+        height: 700,
+   })
         .then((response) => { /* console.log(response) */ })
         .catch(onError);
 }
@@ -690,7 +692,9 @@ async function moveSentMessage() {
     // Need to add a new popup here to get user-specified new folder to move to.
     browser.windows.create({
         url: "/src/move-sent/sent.html",
-        type: "panel"
+        type: "panel",
+        width: 700,
+        height: 700,
     })
         .then((response) => { /* console.log(response) */ })
         .catch(onError);
