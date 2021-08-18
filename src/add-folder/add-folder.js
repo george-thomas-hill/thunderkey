@@ -150,16 +150,44 @@ function recursivelyGetFolderList(folders) {
 let form = document.getElementById('create-folder');
 
 form.addEventListener('submit', (event) => {
-    // TODO: Check if folder name already exists? Does Thunderbird prevent this? 
-    event.preventDefault();
-    browser.windows.getCurrent().then((window) => {
-        let account = form.elements['account-name'].value;
-        let folder = form.elements['parent-folder-name'].value;
-        let newFolder = form.elements['folder-name'].value;
-
-        bg.createNewFolder(window.id, account, folder, newFolder);
-    });
+    addNewFolder(event);
 });
+
+async function addNewFolder(event) {
+    event.preventDefault();
+    let window = await browser.windows.getCurrent();
+    let account = form.elements['account-name'].value;
+    let folder = form.elements['parent-folder-name'].value;
+    let newFolder = form.elements['folder-name'].value;
+
+    let folderPathExists = findFolder(folder + '/' + newFolder, foldersByAccountId[account])
+    
+    if (!folderPathExists)
+        bg.createNewFolder(window.id, account, folder, newFolder);
+    else  {
+        if (!document.getElementById("dangerText")) {
+             var folderInput = document.getElementsByClassName('folder-name-input')[0];
+            var dangerText = document.createElement('span');
+            dangerText.innerHTML = "Folder already exists in subfolder, "
+                + " please rename the folder to proceed.";
+            dangerText.setAttribute('class', 'text-danger');
+            dangerText.id = "dangerText";
+
+            folderInput.append(dangerText);
+        }
+    }
+    
+}
+
+function findFolder(folderPath, foldersList) {
+    var found = false;
+    foldersList.forEach((folder) => {
+        if (folderPath == folder.path) {
+            found = true;
+        }
+    })
+    return found;
+}
 
 var cancelButton = document.createElement('a');
 cancelButton.innerHTML = 'Cancel';
