@@ -56,6 +56,9 @@ async function main() {
         fleshOutTheOptionsDiv();
     };
 
+    var year = document.getElementById("currentYear");
+    year.innerHTML = (new Date()).getFullYear();
+
     async function fleshOutTheOptionsDiv() {
         // Get experimentalShortcutsPreferences.
         const experimentalShortcutsPreferences =
@@ -156,14 +159,19 @@ async function main() {
                                 'my-0 btn btn-block btn-danger'
                             );
                         } else {
+                            cellContents = document.createElement("span");
+                            cellContents.setAttribute(
+                                    "class",
+                                    "my-0 btn btn-block btn-custom",
+                            );
+                            // We'll need to create the shortcut cell.
                             if (thisIsAMac) {
                                 var newStr =
                                     element[key].replace("Meta", "Command");
-                                cellContents = document.createTextNode(newStr);
-                            } else {
-                                cellContents =
-                                    document.createTextNode(element[key]);
+                                cellContents.innerHTML = newStr;
                             }
+                            else 
+                                cellContents.innerHTML = element[key];
                         }
                         cell.appendChild(cellContents);
                     }
@@ -240,16 +248,18 @@ async function main() {
 
             if (oldCommand !== "") {
                 let oldShortcutCell =
-                    document.getElementById(`${oldCommand}-shortcut`);
-                oldShortcutCell.className = "";
+                    document.getElementById(`${oldCommand}-shortcut`).firstChild;
+                oldShortcutCell.className = "my-0 btn btn-block btn-custom";
             }
 
             const newCommand = event.target.dataset.command;
             commandSpan.innerText = newCommand;
 
             let newShortcutCell =
-                document.getElementById(`${newCommand}-shortcut`);
-            newShortcutCell.className = "active";
+                document.getElementById(`${newCommand}-shortcut`).firstChild;
+
+
+            newShortcutCell.className = "my-0 btn btn-block btn-custom active";
         }
 
         // This function is called when the user clicks on a "Reset" button.
@@ -262,8 +272,8 @@ async function main() {
 
             if (oldCommand !== "") {
                 let oldShortcutCell =
-                    document.getElementById(`${oldCommand}-shortcut`);
-                oldShortcutCell.className = "";
+                    document.getElementById(`${oldCommand}-shortcut`).firstChild;
+                oldShortcutCell.className = "my-0 btn btn-block btn-custom";
                 commandSpan.innerText = "";
             }
 
@@ -284,7 +294,7 @@ async function main() {
                 keyCombination,
             });
 
-            let shortcutCell = document.getElementById(`${command}-shortcut`);
+            let shortcutCell = document.getElementById(`${command}-shortcut`).firstChild;
 
             if (thisIsAMac) {
                 var newStr = keyCombination.replace("Meta", "Command");
@@ -304,8 +314,8 @@ async function main() {
 
             if (oldCommand !== "") {
                 let oldShortcutCell =
-                    document.getElementById(`${oldCommand}-shortcut`);
-                oldShortcutCell.className = "";
+                    document.getElementById(`${oldCommand}-shortcut`).firstChild;
+                oldShortcutCell.className = "my-0 btn btn-block btn-custom";
                 commandSpan.innerText = "";
             }
 
@@ -318,7 +328,7 @@ async function main() {
                 keyCombination,
             });
 
-            let shortcutCell = document.getElementById(`${command}-shortcut`);
+            let shortcutCell = document.getElementById(`${command}-shortcut`).firstChild;
             shortcutCell.innerText = keyCombination;
         }
 
@@ -341,8 +351,8 @@ async function main() {
 
             // Otherwise, we need to cancel editing the command.
             let oldShortcutCell =
-                document.getElementById(`${command}-shortcut`);
-            oldShortcutCell.className = "";
+                document.getElementById(`${command}-shortcut`).firstChild;
+            oldShortcutCell.className = "my-0 btn btn-block btn-custom";
 
             commandSpan.innerText = "";
         }
@@ -395,8 +405,8 @@ async function main() {
             if (command === "") return
 
             let oldShortcutCell =
-                document.getElementById(`${command}-shortcut`);
-            oldShortcutCell.className = "";
+                document.getElementById(`${command}-shortcut`).firstChild;
+            oldShortcutCell.className = "my-0 btn btn-block btn-custom";
 
             // We're about to act one way or another, so commandSpan.innerText
             // should be cleared out.
@@ -588,15 +598,20 @@ async function main() {
                                     "selectFolder-" : "moveToFolder-";
                             const command = commandPrefix + (folderNumber + 1);
 
+
+                            cellContents = document.createElement("span");
+                            cellContents.setAttribute(
+                                    "class",
+                                    "my-0 btn btn-block btn-custom",
+                            );
                             // We'll need to create the shortcut cell.
                             if (thisIsAMac) {
                                 var newStr =
                                     element[key].replace("Meta", "Command");
-                                cellContents = document.createTextNode(newStr);
-                            } else {
-                                cellContents =
-                                    document.createTextNode(element[key]);
+                                cellContents.innerHTML = newStr;
                             }
+                            else 
+                                cellContents.innerHTML = element[key];
 
                             cell.appendChild(cellContents);
                             cell.id = `${command}-shortcut`;

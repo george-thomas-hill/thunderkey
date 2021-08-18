@@ -11,14 +11,19 @@
 }
 
 .copyright {
-    margin-top: 15px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 0px;
+    margin: 15px 15px 0px 15px;
+    background: white;
 }
 
 .active {
-    background-color: yellow;
+    cursor: default !important;
+    background: #0FD5EB;
+    color: white;
+}
+
+.btn-custom {
+    text-align: center;
+    cursor: default;
 }
 
 .table td {

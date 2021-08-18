@@ -9,3 +9,6 @@ document.getElementById("options-page").addEventListener("click", openOptions);
 async function openOptions() {
     await browser.runtime.openOptionsPage()
 }
+
+var year = document.getElementById("currentYear");
+year.innerHTML = (new Date()).getFullYear();
