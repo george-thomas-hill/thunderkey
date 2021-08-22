@@ -91,19 +91,15 @@ Support email:
 
 Privacy Policy:
 
-Mozilla requires us to disclose how Thunderkey collects, uses, and stores user data.
-
-Thunderkey only collects the information that you provide to it through the options page.
+Thunderkey only stores the information that you provide to it through the options page.
 
 This information is limited to your choice of shortcuts and your selections of favorite folders.
 
 This information is necessary for Thunderkey to respond correctly when you use a keyboard shortcut.
 
-The information is stored on your computer's hard drive.
+This information is stored only on your hard drive.
 
 It does not leave your computer (unless, for example, you use some kind of backup or file-synchronization service).
-
-If you do not provide this information, Thunderkey will use only the default keyboard shortcuts.
 
 --------------------------------------------------------------------------------
 
