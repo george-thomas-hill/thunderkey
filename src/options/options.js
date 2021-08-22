@@ -130,10 +130,10 @@ async function main() {
                             if (thisIsAMac) {
                                 var newStr =
                                     element[key].replace("Meta", "Command");
-                                cellContents.innerHTML = newStr; // TODO: Rewrite to use innerText.
+                                cellContents.innerText = newStr;
                             }
                             else {
-                                cellContents.innerHTML = element[key]; // TODO: Rewrite to use innerText.
+                                cellContents.innerText = element[key];
                             }
                         }
                         cell.appendChild(cellContents);
