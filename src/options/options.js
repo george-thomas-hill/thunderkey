@@ -571,10 +571,10 @@ async function main() {
                             if (thisIsAMac) {
                                 var newStr =
                                     element[key].replace("Meta", "Command");
-                                cellContents.innerHTML = newStr; // TODO: Rewrite to use innerText.
+                                cellContents.innerText = newStr;
                             }
                             else {
-                                cellContents.innerHTML = element[key]; // TODO: Rewrite to use innerText.
+                                cellContents.innerText = element[key];
                             }
                             cell.appendChild(cellContents);
                             cell.id = `${command}-shortcut`;
@@ -753,7 +753,7 @@ async function main() {
                                         await backgroundPage.addToFavoriteFolders(favoriteFolders, splitStr[0], splitStr[1]);
                             };
                             var labelText = document.createElement('label');
-                            labelText.innerHTML = folder.name; // TODO: Rewrite to use innerText.
+                            labelText.innerText = folder.name;
 
                             enclosingDiv.append(opt);
                             opt.setAttribute('class', 'mr-2');
