@@ -718,8 +718,21 @@ async function main() {
                         var insertAccountForm = document.createElement('div');
                         insertAccountForm.setAttribute('class', 'mt-4 col-12');
                         var accountName = document.createElement('div');
-                        accountName.innerHTML =
-                            "<b>Account Name: </b>" + item.name + "<br/><hr/>"; // TODO: Rewrite to use innerText.
+
+                        const accountLabel = document.createElement("span");
+                        accountLabel.style.fontWeight = "bold";
+                        accountName.appendChild(accountLabel);
+
+                        const accountTitle = document.createElement("span");
+                        accountTitle.innerText = item.name;
+                        accountName.appendChild(accountTitle);
+
+                        const breakElement = document.createElement("br");
+                        accountName.appendChild(breakElement);
+
+                        const horizontalRule = document.createElement("hr");
+                        accountName.appendChild(horizontalRule);
+
                         insertAccountForm.append(accountName);
 
                         foldersByAccountId[item.id].forEach((folder, ind) => {
