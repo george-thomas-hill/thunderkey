@@ -161,8 +161,8 @@ async function main() {
                         } else {
                             cellContents = document.createElement("span");
                             cellContents.setAttribute(
-                                    "class",
-                                    "my-0 btn btn-block btn-custom",
+                                "class",
+                                "my-0 btn btn-block btn-custom",
                             );
                             // We'll need to create the shortcut cell.
                             if (thisIsAMac) {
@@ -170,8 +170,9 @@ async function main() {
                                     element[key].replace("Meta", "Command");
                                 cellContents.innerHTML = newStr;
                             }
-                            else 
+                            else {
                                 cellContents.innerHTML = element[key];
+                            }
                         }
                         cell.appendChild(cellContents);
                     }
@@ -601,8 +602,8 @@ async function main() {
 
                             cellContents = document.createElement("span");
                             cellContents.setAttribute(
-                                    "class",
-                                    "my-0 btn btn-block btn-custom",
+                                "class",
+                                "my-0 btn btn-block btn-custom",
                             );
                             // We'll need to create the shortcut cell.
                             if (thisIsAMac) {
@@ -610,9 +611,9 @@ async function main() {
                                     element[key].replace("Meta", "Command");
                                 cellContents.innerHTML = newStr;
                             }
-                            else 
+                            else {
                                 cellContents.innerHTML = element[key];
-
+                            }
                             cell.appendChild(cellContents);
                             cell.id = `${command}-shortcut`;
 

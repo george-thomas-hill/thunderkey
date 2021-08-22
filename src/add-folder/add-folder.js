@@ -160,13 +160,15 @@ async function addNewFolder(event) {
     let folder = form.elements['parent-folder-name'].value;
     let newFolder = form.elements['folder-name'].value;
 
-    let folderPathExists = findFolder(folder + '/' + newFolder, foldersByAccountId[account])
-    
-    if (!folderPathExists)
+    let folderPathExists =
+        findFolder(folder + '/' + newFolder, foldersByAccountId[account]);
+
+    if (!folderPathExists) {
         bg.createNewFolder(window.id, account, folder, newFolder);
-    else  {
+    } else {
         if (!document.getElementById("dangerText")) {
-             var folderInput = document.getElementsByClassName('folder-name-input')[0];
+            var folderInput =
+                document.getElementsByClassName('folder-name-input')[0];
             var dangerText = document.createElement('span');
             dangerText.innerHTML = "Folder already exists in subfolder, "
                 + " please rename the folder to proceed.";
@@ -176,7 +178,6 @@ async function addNewFolder(event) {
             folderInput.append(dangerText);
         }
     }
-    
 }
 
 function findFolder(folderPath, foldersList) {
