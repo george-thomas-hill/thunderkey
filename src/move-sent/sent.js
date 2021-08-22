@@ -154,9 +154,9 @@ bg.getAccounts().then((res) => {
                                 "<div class='card-header py-1'>" +
                                 "Most Recent Message In Sent Folder</div>" +
                                 "<div class='card-body py-0'>Subject: " +
-                                folderMessage.subject +
+                                folderMessage.subject + // TODO: Rewrite to use innerText.
                                 "<br/>Recipients: " +
-                                recip +
+                                recip + // TODO: Rewrite to use innerText.
                                 "</div>";
                         } else {
                             hideSubmitOption()
@@ -181,8 +181,8 @@ bg.getAccounts().then((res) => {
                                     "<div class='card-header py-1'>" +
                                     "Most Recent Message In Sent Folder</div>" +
                                     "<div class='card-body py-0'>Subject: " +
-                                    folderMessage.subject +
-                                    "<br/>Recipients: " + recip + "</div>";
+                                    folderMessage.subject + // TODO: Rewrite to use innerText.
+                                    "<br/>Recipients: " + recip + "</div>"; // TODO: Rewrite to use innerText.
                             } else {
                                 hideSubmitOption()
                                 mostRecentMessage = null;
@@ -287,9 +287,9 @@ selectOptionOriginal.addEventListener('change', (event) => {
                     "<div class='card-header py-1'>" +
                     "Most Recent Message in Sent Folder</div>" +
                     "<div class='card-body py-0'>Subject: " +
-                    folderMessage.subject +
+                    folderMessage.subject + // TODO: Rewrite to use innerText.
                     "<br/>Recipients: " +
-                    recip +
+                    recip + // TODO: Rewrite to use innerText.
                     "</div>";
             } else {
                 hideSubmitOption();

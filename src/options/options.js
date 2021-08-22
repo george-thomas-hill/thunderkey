@@ -130,10 +130,10 @@ async function main() {
                             if (thisIsAMac) {
                                 var newStr =
                                     element[key].replace("Meta", "Command");
-                                cellContents.innerHTML = newStr;
+                                cellContents.innerHTML = newStr; // TODO: Rewrite to use innerText.
                             }
                             else {
-                                cellContents.innerHTML = element[key];
+                                cellContents.innerHTML = element[key]; // TODO: Rewrite to use innerText.
                             }
                         }
                         cell.appendChild(cellContents);
@@ -571,10 +571,10 @@ async function main() {
                             if (thisIsAMac) {
                                 var newStr =
                                     element[key].replace("Meta", "Command");
-                                cellContents.innerHTML = newStr;
+                                cellContents.innerHTML = newStr; // TODO: Rewrite to use innerText.
                             }
                             else {
-                                cellContents.innerHTML = element[key];
+                                cellContents.innerHTML = element[key]; // TODO: Rewrite to use innerText.
                             }
                             cell.appendChild(cellContents);
                             cell.id = `${command}-shortcut`;
@@ -719,7 +719,7 @@ async function main() {
                         insertAccountForm.setAttribute('class', 'mt-4 col-12');
                         var accountName = document.createElement('div');
                         accountName.innerHTML =
-                            "<b>Account Name: </b>" + item.name + "<br/><hr/>";
+                            "<b>Account Name: </b>" + item.name + "<br/><hr/>"; // TODO: Rewrite to use innerText.
                         insertAccountForm.append(accountName);
 
                         foldersByAccountId[item.id].forEach((folder, ind) => {
@@ -753,7 +753,7 @@ async function main() {
                                         await backgroundPage.addToFavoriteFolders(favoriteFolders, splitStr[0], splitStr[1]);
                             };
                             var labelText = document.createElement('label');
-                            labelText.innerHTML = folder.name;
+                            labelText.innerHTML = folder.name; // TODO: Rewrite to use innerText.
 
                             enclosingDiv.append(opt);
                             opt.setAttribute('class', 'mr-2');
