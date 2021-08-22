@@ -24,7 +24,11 @@ All shortcuts can be customized.
 
 ## Screenshots
 
-![Screenshot of options page showing Quick Actions settings](/addons.thunderbird.net/screenshot-1-quick-actions.png?raw=true "Optional Title")
+![Screenshot of options page showing Quick Actions settings](/addons.thunderbird.net/screenshot-1-quick-actions.png?raw=true)
+
+![Screenshot of options page showing Folder Preferences settings](/addons.thunderbird.net/screenshot-2-folder-preferences.png?raw=true)
+
+![Screenshot of options page showing Favorite Folders for Sent Messages settings](/addons.thunderbird.net/screenshot-3-favorite-folders-for-sent-messages-with-redactions.png?raw=true)
 
 ## Installation
 
