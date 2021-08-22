@@ -279,6 +279,8 @@ var keydownWindowListener = new class extends ExtensionCommon.EventEmitter {
 
         if (keyCombination === "") return;
 
+        if (event.target.tagName === "search-textbox") return;
+
         const path = event.view.location.href;
 
         keydownWindowListener.emit("keypress", keyCombination, path);
