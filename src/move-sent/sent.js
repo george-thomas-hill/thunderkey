@@ -150,14 +150,11 @@ bg.getAccounts().then((res) => {
                             var recip = folderMessage.recipients.join();
                             recip = recip.replaceAll('<', '(');
                             recip = recip.replaceAll('>', ')');
-                            messageSent.innerHTML =
-                                "<div class='card-header py-1'>" +
-                                "Most Recent Message In Sent Folder</div>" +
-                                "<div class='card-body py-0'>Subject: " +
-                                folderMessage.subject + // TODO: Rewrite to use innerText.
-                                "<br/>Recipients: " +
-                                recip + // TODO: Rewrite to use innerText.
-                                "</div>";
+                            buildMessageSentDiv(
+                                messageSent,
+                                folderMessage.subject,
+                                recip
+                            );
                         } else {
                             hideSubmitOption()
                             mostRecentMessage = null;
@@ -177,12 +174,11 @@ bg.getAccounts().then((res) => {
                                 var recip = folderMessage.recipients.join();
                                 recip = recip.replaceAll('<', '(');
                                 recip = recip.replaceAll('>', ')');
-                                messageSent.innerHTML =
-                                    "<div class='card-header py-1'>" +
-                                    "Most Recent Message In Sent Folder</div>" +
-                                    "<div class='card-body py-0'>Subject: " +
-                                    folderMessage.subject + // TODO: Rewrite to use innerText.
-                                    "<br/>Recipients: " + recip + "</div>"; // TODO: Rewrite to use innerText.
+                                buildMessageSentDiv(
+                                    messageSent,
+                                    folderMessage.subject,
+                                    recip
+                                );
                             } else {
                                 hideSubmitOption()
                                 mostRecentMessage = null;
@@ -283,14 +279,11 @@ selectOptionOriginal.addEventListener('change', (event) => {
                 var recip = folderMessage.recipients.join();
                 recip = recip.replaceAll('<', '(');
                 recip = recip.replaceAll('>', ')');
-                messageSent.innerHTML =
-                    "<div class='card-header py-1'>" +
-                    "Most Recent Message in Sent Folder</div>" +
-                    "<div class='card-body py-0'>Subject: " +
-                    folderMessage.subject + // TODO: Rewrite to use innerText.
-                    "<br/>Recipients: " +
-                    recip + // TODO: Rewrite to use innerText.
-                    "</div>";
+                buildMessageSentDiv(
+                    messageSent,
+                    folderMessage.subject,
+                    recip
+                );
             } else {
                 hideSubmitOption();
                 mostRecentMessage = null;
@@ -385,3 +378,25 @@ cancelButton.onclick = function (event) {
 let formButton = document.getElementById('button-group');
 
 formButton.append(cancelButton);
+
+function buildMessageSentDiv(theDiv, theSubject, theRecipients) {
+    let theFirstDiv = document.createElement("div");
+    theFirstDiv.className = "card-header py-1";
+    theFirstDiv.innerText = "Most Recent Message in Sent Folder";
+    theDiv.appendChild(theFirstDiv);
+
+    let theSecondDiv = document.createElement("div");
+    theSecondDiv.className = "card-body py-0";
+    theDiv.appendChild(theSecondDiv);
+
+    let theFirstSpan = document.createElement("span");
+    theFirstSpan.innerText = "Subject: " + theSubject;
+    theSecondDiv.appendChild(theFirstSpan);
+
+    let theBreakElement = document.createElement("br");
+    theSecondDiv.appendChild(theBreakElement);
+
+    let theSecondSpan = document.createElement("span");
+    theSecondSpan.innerText = "Recipients: " + theRecipients;
+    theSecondDiv.appendChild(theSecondSpan);
+}
