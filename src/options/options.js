@@ -16,48 +16,10 @@ const thisIsAMac = navigator.platform.indexOf("Mac") !== -1;
 main();
 
 async function main() {
-    // See if the user has opted-in to local storage.
-    const optin = await browser.storage.local.get("optin");
-    const optinBoolean = optin.optin || false;
-
-    // Make the opt-in checkbox reflect the user's preference.
-    const optinElement = document.getElementById("optin");
-    optinElement.checked = optinBoolean;
-
-    // Let the user opt-in.
-    optinElement.addEventListener("change", handleOptinChange);
-
-    async function handleOptinChange(event) {
-        const selectedStatus = event.target.checked;
-        if (selectedStatus === true) {
-            await browser.storage.local.set({ optin: true });
-            optionsElement.style.display = "block";
-            fleshOutTheOptionsDiv();
-        } else {
-            const choice = confirm(
-                `Proceeding will erase your customizations. This cannot ` +
-                `be undone. Click "OK" to erase or "Cancel" to leave ` +
-                `customizations unchanged.`
-            );
-            console.log("!");
-            if (choice === true) {
-                await browser.storage.local.clear();
-                window.location.reload(true);
-            } else {
-                optinElement.checked = true;
-            }
-        }
-    }
-
-    // Show other options, if the user has opted-in.
-    const optionsElement = document.getElementById("options");
-    if (optinBoolean === true) {
-        optionsElement.style.display = "block";
-        fleshOutTheOptionsDiv();
-    };
-
     var year = document.getElementById("currentYear");
     year.innerHTML = (new Date()).getFullYear();
+
+    fleshOutTheOptionsDiv();
 
     async function fleshOutTheOptionsDiv() {
         // Get experimentalShortcutsPreferences.

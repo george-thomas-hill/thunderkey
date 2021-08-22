@@ -641,7 +641,7 @@ async function addFolder() {
         type: "panel",
         width: 700,
         height: 700,
-   })
+    })
         .then((response) => { /* console.log(response) */ })
         .catch(onError);
 }
@@ -1092,15 +1092,10 @@ function getFilterFunction(searchString) {
 // These functions are used by options.js.
 
 async function getFavoriteFolders() {
-    const optin = await browser.storage.local.get("optin");
-    if (optin && optin.optin) {
-        const folderPreferences =
-            await browser.storage.local.get("favoriteFolders");
+    const folderPreferences =
+        await browser.storage.local.get("favoriteFolders");
 
-        return folderPreferences;
-    } else {
-        return {};
-    }
+    return folderPreferences;
 }
 
 async function addToFavoriteFolders(favoriteFolders, key, value) {
@@ -1111,24 +1106,18 @@ async function addToFavoriteFolders(favoriteFolders, key, value) {
     } else {
         localFavorites[key] = [value]
     }
-    const optin = await browser.storage.local.get("optin");
-    if (optin) {
-        var add = await browser.storage.local.set({
-            favoriteFolders: localFavorites
-        });
-    }
+    var add = await browser.storage.local.set({
+        favoriteFolders: localFavorites
+    });
 }
 
 async function removeFromFavoriteFolders(favoriteFolders, key, value) {
     const index = favoriteFolders['favoriteFolders'][key].indexOf(value);
     if (index > -1) {
         favoriteFolders['favoriteFolders'][key].splice(index, 1);
-        const optin = await browser.storage.local.get("optin");
-        if (optin && optin.optin) {
-            await browser.storage.local.set({
-                favoriteFolders: favoriteFolders['favoriteFolders']
-            });
-        }
+        await browser.storage.local.set({
+            favoriteFolders: favoriteFolders['favoriteFolders']
+        });
     }
 }
 
