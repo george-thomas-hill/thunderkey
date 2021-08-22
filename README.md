@@ -22,6 +22,10 @@ You can:
 
 All shortcuts can be customized.
 
+## Screenshots
+
+![Screenshot of options page showing Quick Actions settings](/addons.thunderbird.net/screenshot-1-quick-actions.png?raw=true "Optional Title")
+
 ## Installation
 
 If you wish to install this extension, it is best to install it from within Thunderbird.
