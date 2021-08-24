@@ -964,7 +964,7 @@ function getFolderComparisonFunction(parametersObject) {
                 "drafts", // 1
                 "sent", // 2
                 "archives", // 3
-                "junk", // 4?
+                // "junk", // 4?
                 "trash", // 5
                 "templates", // 6 ?
                 "outbox", // 7 ?
