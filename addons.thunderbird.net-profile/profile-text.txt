@@ -45,29 +45,35 @@ Thunderkey lets you perform common email tasks using keyboard shortcuts.
 
 You can:
 
-* Scroll a message up or down without leaving your main window's messages list.
+<ul>
 
-* Navigate up or down one folder at a time.
+<li>Scroll a message up or down without leaving your main window's messages list.</li>
 
-* Jump to your favorite folders.
+<li>Navigate up or down one folder at a time.</li>
 
-* File messages in those folders.
+<li>Jump to your favorite folders.</li>
 
-* File your last-sent message.
+<li>File messages in those folders.</li>
 
-* Create new folders.
+<li>File your last-sent message.</li>
+
+<li>Create new folders.</li>
+
+</ul>
 
 All shortcuts can be customized.
 
-Mozilla requires us to disclose how Thunderkey collects, uses, and stores user data.
+--------------------------------------------------------------------------------
 
-Thunderkey only collects the information that you provide to it through the options page; Thunderkey stores that information on your hard drive.
-
-More information is in our Privacy Policy.
+Developer Comments:
 
 Known Issue:
 
-* Changes made with this extension—like filing a message in a folder—aren't noticed by Thunderbird's undo/redo system. This is a limitation built into Thunderbird and we can't change it through this extension.
+<ul>
+
+<li>Changes made with this extension—like filing a message in a folder—aren't noticed by Thunderbird's undo/redo system. This is a limitation built into Thunderbird and we can't change it through this extension.</li>
+
+</ul>
 
 --------------------------------------------------------------------------------
 
