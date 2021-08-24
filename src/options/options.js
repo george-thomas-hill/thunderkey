@@ -121,12 +121,18 @@ async function main() {
                                 'my-0 btn btn-block btn-danger'
                             );
                         } else {
+                            // We'll need to create the shortcut cell.
                             cellContents = document.createElement("span");
                             cellContents.setAttribute(
                                 "class",
                                 "my-0 btn btn-block btn-custom",
                             );
-                            // We'll need to create the shortcut cell.
+                            cellContents.dataset.command = command;
+                            cellContents.addEventListener(
+                                "click",
+                                changeShortcut
+                            );
+                            cellContents.addEventListener("mouseleave", blurIt);
                             if (thisIsAMac) {
                                 var newStr =
                                     element[key].replace("Meta", "Command");
@@ -561,13 +567,18 @@ async function main() {
                                     "selectFolder-" : "moveToFolder-";
                             const command = commandPrefix + (folderNumber + 1);
 
-
+                            // We'll need to create the shortcut cell.
                             cellContents = document.createElement("span");
                             cellContents.setAttribute(
                                 "class",
                                 "my-0 btn btn-block btn-custom",
                             );
-                            // We'll need to create the shortcut cell.
+                            cellContents.dataset.command = command;
+                            cellContents.addEventListener(
+                                "click",
+                                changeShortcut
+                            );
+                            cellContents.addEventListener("mouseleave", blurIt);
                             if (thisIsAMac) {
                                 var newStr =
                                     element[key].replace("Meta", "Command");
