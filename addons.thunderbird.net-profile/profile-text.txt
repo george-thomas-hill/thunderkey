@@ -35,7 +35,7 @@ Categories:
 
 Tags:
 
-keyboard shortcut shortcuts scroll up down navigate jump file folder folders favorite favorites sent message create
+keyboard, shortcut, shortcuts, scroll, up, down, navigate, jump, file, folder, folders, favorite, favorites, sent, message, create
 
 --------------------------------------------------------------------------------
 
