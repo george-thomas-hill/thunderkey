@@ -11,4 +11,4 @@ async function openOptions() {
 }
 
 var year = document.getElementById("currentYear");
-year.innerHTML = (new Date()).getFullYear();
+year.innerText = (new Date()).getFullYear();
