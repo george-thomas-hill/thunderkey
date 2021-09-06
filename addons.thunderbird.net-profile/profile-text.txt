@@ -115,6 +115,10 @@ Mozilla Public License, version 2.0
 
 --------------------------------------------------------------------------------
 
+Version Information for Version 1.0.1:
+
+* Added "strict_max_version" entry to manifest.json.
+
 Version Information for Version 1.0.0:
 
 This is the first release.
