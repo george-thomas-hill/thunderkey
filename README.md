@@ -2,6 +2,10 @@
 
 This is the source code for [Thunderkey](https://addons.thunderbird.net/thunderbird/addon/thunderkey), a Thunderbird extension.
 
+## End-of-Life?
+
+UPDATE, July 11, 2022: Though Thunderkey installs on Thunderbird 102.0, some functionality does not work correctly, and Thunderkey will likely not install at all on subsequent versions of Thunderbird. For more information, see: https://github.com/george-thomas-hill/thunderkey/issues/2
+
 ## Features
 
 Thunderkey lets you perform common email tasks using keyboard shortcuts.
